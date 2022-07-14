@@ -1,0 +1,6 @@
+framework module FLYKit {
+  umbrella header "FLYKit.h"
+
+  export *
+  module * { export * }
+}

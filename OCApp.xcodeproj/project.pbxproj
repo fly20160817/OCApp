@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		044F52D9287EAAC400948767 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F52D8287EAAC400948767 /* AppDelegate.m */; };
+		044F52E4287EAAC800948767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F52E3287EAAC800948767 /* Assets.xcassets */; };
+		044F52E7287EAAC800948767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F52E5287EAAC800948767 /* LaunchScreen.storyboard */; };
+		044F52EA287EAAC800948767 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F52E9287EAAC800948767 /* main.m */; };
+		044F5315287EB64500948767 /* FLYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5313287EB64500948767 /* FLYModel.m */; };
+		044F5316287EB64500948767 /* FLYKeyValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5314287EB64500948767 /* FLYKeyValueModel.m */; };
+		044F531A287EB6D400948767 /* FLYExceptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5318287EB6D400948767 /* FLYExceptionView.m */; };
+		044F5321287EB89B00948767 /* FLYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F531B287EB89B00948767 /* FLYBaseViewController.m */; };
+		044F5322287EB89B00948767 /* FLYBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F531F287EB89B00948767 /* FLYBaseTableViewController.m */; };
+		044F5323287EB89B00948767 /* FLYBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5320287EB89B00948767 /* FLYBaseCollectionViewController.m */; };
+		044F5329287EB94C00948767 /* FLYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5327287EB94C00948767 /* FLYNavigationController.m */; };
+		044F532A287EB94C00948767 /* FLYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5328287EB94C00948767 /* FLYTabBarController.m */; };
+		044F532D287EBA5600948767 /* FLYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F532C287EBA5600948767 /* FLYHomeViewController.m */; };
+		044F5330287EBA8A00948767 /* FLYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F532F287EBA8A00948767 /* FLYMessageViewController.m */; };
+		044F5333287EBAA500948767 /* FLYMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5332287EBAA500948767 /* FLYMyViewController.m */; };
+		044F5338287EBAD300948767 /* FLYNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5334287EBAD300948767 /* FLYNetworkTool.m */; };
+		044F5339287EBAD300948767 /* FLYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5337287EBAD300948767 /* FLYNetwork.m */; };
+		044F5346287EBB8D00948767 /* UICollectionView+FLYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5345287EBB8D00948767 /* UICollectionView+FLYRefresh.m */; };
+		044F5349287EBBA700948767 /* UITableView+FLYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5348287EBBA700948767 /* UITableView+FLYRefresh.m */; };
+		044F5350287EBCB200948767 /* Tabbar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044F534F287EBCB200948767 /* Tabbar.plist */; };
+		044F5353287EBDEE00948767 /* FLYConfigureSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5352287EBDEE00948767 /* FLYConfigureSDK.m */; };
+		044F5359287EBF1000948767 /* FLYUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5355287EBF0F00948767 /* FLYUserAction.m */; };
+		044F535A287EBF1000948767 /* FLYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5358287EBF0F00948767 /* FLYUser.m */; };
+		044F5360287EC7A000948767 /* FLYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044F535F287EC79F00948767 /* FLYKit.framework */; };
+		C10E966804B5DFA0218B5761 /* Pods_OCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0887727BB90EEC68799E6F /* Pods_OCApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		044F52D4287EAAC400948767 /* OCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		044F52D7287EAAC400948767 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		044F52D8287EAAC400948767 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		044F52E3287EAAC800948767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		044F52E6287EAAC800948767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		044F52E8287EAAC800948767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044F52E9287EAAC800948767 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		044F5310287EAED800948767 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		044F5311287EB64500948767 /* FLYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYModel.h; sourceTree = "<group>"; };
+		044F5312287EB64500948767 /* FLYKeyValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYKeyValueModel.h; sourceTree = "<group>"; };
+		044F5313287EB64500948767 /* FLYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYModel.m; sourceTree = "<group>"; };
+		044F5314287EB64500948767 /* FLYKeyValueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYKeyValueModel.m; sourceTree = "<group>"; };
+		044F5317287EB6D400948767 /* FLYExceptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYExceptionView.h; sourceTree = "<group>"; };
+		044F5318287EB6D400948767 /* FLYExceptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYExceptionView.m; sourceTree = "<group>"; };
+		044F5319287EB6D400948767 /* FLYDataStatusProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYDataStatusProtocal.h; sourceTree = "<group>"; };
+		044F531B287EB89B00948767 /* FLYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYBaseViewController.m; sourceTree = "<group>"; };
+		044F531C287EB89B00948767 /* FLYBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYBaseTableViewController.h; sourceTree = "<group>"; };
+		044F531D287EB89B00948767 /* FLYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYBaseViewController.h; sourceTree = "<group>"; };
+		044F531E287EB89B00948767 /* FLYBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYBaseCollectionViewController.h; sourceTree = "<group>"; };
+		044F531F287EB89B00948767 /* FLYBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYBaseTableViewController.m; sourceTree = "<group>"; };
+		044F5320287EB89B00948767 /* FLYBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYBaseCollectionViewController.m; sourceTree = "<group>"; };
+		044F5325287EB94C00948767 /* FLYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYNavigationController.h; sourceTree = "<group>"; };
+		044F5326287EB94C00948767 /* FLYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYTabBarController.h; sourceTree = "<group>"; };
+		044F5327287EB94C00948767 /* FLYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYNavigationController.m; sourceTree = "<group>"; };
+		044F5328287EB94C00948767 /* FLYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYTabBarController.m; sourceTree = "<group>"; };
+		044F532B287EBA5600948767 /* FLYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLYHomeViewController.h; sourceTree = "<group>"; };
+		044F532C287EBA5600948767 /* FLYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLYHomeViewController.m; sourceTree = "<group>"; };
+		044F532E287EBA8A00948767 /* FLYMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLYMessageViewController.h; sourceTree = "<group>"; };
+		044F532F287EBA8A00948767 /* FLYMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLYMessageViewController.m; sourceTree = "<group>"; };
+		044F5331287EBAA500948767 /* FLYMyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLYMyViewController.h; sourceTree = "<group>"; };
+		044F5332287EBAA500948767 /* FLYMyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLYMyViewController.m; sourceTree = "<group>"; };
+		044F5334287EBAD300948767 /* FLYNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYNetworkTool.m; sourceTree = "<group>"; };
+		044F5335287EBAD300948767 /* FLYNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYNetworkTool.h; sourceTree = "<group>"; };
+		044F5336287EBAD300948767 /* FLYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYNetwork.h; sourceTree = "<group>"; };
+		044F5337287EBAD300948767 /* FLYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYNetwork.m; sourceTree = "<group>"; };
+		044F5344287EBB8D00948767 /* UICollectionView+FLYRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FLYRefresh.h"; sourceTree = "<group>"; };
+		044F5345287EBB8D00948767 /* UICollectionView+FLYRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FLYRefresh.m"; sourceTree = "<group>"; };
+		044F5347287EBBA700948767 /* UITableView+FLYRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FLYRefresh.h"; sourceTree = "<group>"; };
+		044F5348287EBBA700948767 /* UITableView+FLYRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FLYRefresh.m"; sourceTree = "<group>"; };
+		044F534A287EBBE500948767 /* FLYProjectMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLYProjectMacros.h; sourceTree = "<group>"; };
+		044F534B287EBC2900948767 /* APIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		044F534C287EBC5400948767 /* OCApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		044F534F287EBCB200948767 /* Tabbar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tabbar.plist; sourceTree = "<group>"; };
+		044F5351287EBDEE00948767 /* FLYConfigureSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYConfigureSDK.h; sourceTree = "<group>"; };
+		044F5352287EBDEE00948767 /* FLYConfigureSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYConfigureSDK.m; sourceTree = "<group>"; };
+		044F5355287EBF0F00948767 /* FLYUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYUserAction.m; sourceTree = "<group>"; };
+		044F5356287EBF0F00948767 /* FLYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYUser.h; sourceTree = "<group>"; };
+		044F5357287EBF0F00948767 /* FLYUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYUserAction.h; sourceTree = "<group>"; };
+		044F5358287EBF0F00948767 /* FLYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYUser.m; sourceTree = "<group>"; };
+		044F535F287EC79F00948767 /* FLYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FLYKit.framework; sourceTree = "<group>"; };
+		350F7BB582691BD32AC709AB /* Pods-OCApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCApp.debug.xcconfig"; path = "Target Support Files/Pods-OCApp/Pods-OCApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BF0887727BB90EEC68799E6F /* Pods_OCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5703F970874171FD95CA11E /* Pods-OCApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCApp.release.xcconfig"; path = "Target Support Files/Pods-OCApp/Pods-OCApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		044F52D1287EAAC400948767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10E966804B5DFA0218B5761 /* Pods_OCApp.framework in Frameworks */,
+				044F5360287EC7A000948767 /* FLYKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		044F52CB287EAAC400948767 = {
+			isa = PBXGroup;
+			children = (
+				044F52D6287EAAC400948767 /* OCApp */,
+				044F52D5287EAAC400948767 /* Products */,
+				C06E5DFF2D8DBA9A0801B149 /* Pods */,
+				6630D40B009B0D2868843346 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		044F52D5287EAAC400948767 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				044F52D4287EAAC400948767 /* OCApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		044F52D6287EAAC400948767 /* OCApp */ = {
+			isa = PBXGroup;
+			children = (
+				044F52F8287EAC4600948767 /* Main */,
+				044F52F7287EAC4200948767 /* NetWork */,
+				044F52F6287EAC0A00948767 /* Class */,
+				044F52F5287EAC0500948767 /* Category */,
+				044F52F4287EABFE00948767 /* Tools */,
+				044F52F3287EABF700948767 /* Constant */,
+				044F52F2287EABF300948767 /* Resource */,
+				044F52F1287EABE900948767 /* 3rd */,
+				044F52F0287EABDE00948767 /* Frameworks */,
+				044F52F9287EAC8F00948767 /* AppDelegate */,
+				044F52E9287EAAC800948767 /* main.m */,
+			);
+			path = OCApp;
+			sourceTree = "<group>";
+		};
+		044F52F0287EABDE00948767 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				044F535F287EC79F00948767 /* FLYKit.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		044F52F1287EABE900948767 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		044F52F2287EABF300948767 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				044F52E8287EAAC800948767 /* Info.plist */,
+				044F52E3287EAAC800948767 /* Assets.xcassets */,
+				044F52E5287EAAC800948767 /* LaunchScreen.storyboard */,
+				044F534F287EBCB200948767 /* Tabbar.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		044F52F3287EABF700948767 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				044F5310287EAED800948767 /* PrefixHeader.pch */,
+				044F534A287EBBE500948767 /* FLYProjectMacros.h */,
+				044F534B287EBC2900948767 /* APIConfig.h */,
+				044F534C287EBC5400948767 /* OCApp-Bridging-Header.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		044F52F4287EABFE00948767 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				044F5354287EBF0F00948767 /* FLYUser */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		044F52F5287EAC0500948767 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				044F533B287EBB0000948767 /* UITableView */,
+				044F533A287EBAFE00948767 /* UICollectionView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		044F52F6287EAC0A00948767 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		044F52F7287EAC4200948767 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				044F5335287EBAD300948767 /* FLYNetworkTool.h */,
+				044F5334287EBAD300948767 /* FLYNetworkTool.m */,
+				044F5336287EBAD300948767 /* FLYNetwork.h */,
+				044F5337287EBAD300948767 /* FLYNetwork.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		044F52F8287EAC4600948767 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				044F52FE287EAD7B00948767 /* Public */,
+				044F52FD287EAD7900948767 /* Nav&TabBar */,
+				044F52FC287EAD7600948767 /* Home */,
+				044F52FB287EAD7400948767 /* Message */,
+				044F52FA287EAD7100948767 /* My */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		044F52F9287EAC8F00948767 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				044F52D7287EAAC400948767 /* AppDelegate.h */,
+				044F52D8287EAAC400948767 /* AppDelegate.m */,
+				044F5351287EBDEE00948767 /* FLYConfigureSDK.h */,
+				044F5352287EBDEE00948767 /* FLYConfigureSDK.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		044F52FA287EAD7100948767 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				044F530D287EADCE00948767 /* Model */,
+				044F530C287EADCB00948767 /* View */,
+				044F530B287EADC900948767 /* Controller */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		044F52FB287EAD7400948767 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				044F530A287EADC600948767 /* Model */,
+				044F5309287EADC400948767 /* View */,
+				044F5308287EADC200948767 /* Controller */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		044F52FC287EAD7600948767 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				044F5307287EADBF00948767 /* Model */,
+				044F5306287EADBD00948767 /* View */,
+				044F5305287EADBA00948767 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		044F52FD287EAD7900948767 /* Nav&TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				044F5304287EADB500948767 /* Model */,
+				044F5303287EADB200948767 /* View */,
+				044F5302287EADB000948767 /* Controller */,
+			);
+			path = "Nav&TabBar";
+			sourceTree = "<group>";
+		};
+		044F52FE287EAD7B00948767 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				044F5301287EADAC00948767 /* Model */,
+				044F5300287EADA900948767 /* View */,
+				044F52FF287EADA600948767 /* Controller */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		044F52FF287EADA600948767 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044F531D287EB89B00948767 /* FLYBaseViewController.h */,
+				044F531B287EB89B00948767 /* FLYBaseViewController.m */,
+				044F531C287EB89B00948767 /* FLYBaseTableViewController.h */,
+				044F531F287EB89B00948767 /* FLYBaseTableViewController.m */,
+				044F531E287EB89B00948767 /* FLYBaseCollectionViewController.h */,
+				044F5320287EB89B00948767 /* FLYBaseCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044F5300287EADA900948767 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044F5324287EB8BD00948767 /* 异常状态View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044F5301287EADAC00948767 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044F5312287EB64500948767 /* FLYKeyValueModel.h */,
+				044F5314287EB64500948767 /* FLYKeyValueModel.m */,
+				044F5311287EB64500948767 /* FLYModel.h */,
+				044F5313287EB64500948767 /* FLYModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044F5302287EADB000948767 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044F5325287EB94C00948767 /* FLYNavigationController.h */,
+				044F5327287EB94C00948767 /* FLYNavigationController.m */,
+				044F5326287EB94C00948767 /* FLYTabBarController.h */,
+				044F5328287EB94C00948767 /* FLYTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044F5303287EADB200948767 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044F5304287EADB500948767 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044F5305287EADBA00948767 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044F532B287EBA5600948767 /* FLYHomeViewController.h */,
+				044F532C287EBA5600948767 /* FLYHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044F5306287EADBD00948767 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044F5307287EADBF00948767 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044F5308287EADC200948767 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044F532E287EBA8A00948767 /* FLYMessageViewController.h */,
+				044F532F287EBA8A00948767 /* FLYMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044F5309287EADC400948767 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044F530A287EADC600948767 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044F530B287EADC900948767 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044F5331287EBAA500948767 /* FLYMyViewController.h */,
+				044F5332287EBAA500948767 /* FLYMyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044F530C287EADCB00948767 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044F530D287EADCE00948767 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044F5324287EB8BD00948767 /* 异常状态View */ = {
+			isa = PBXGroup;
+			children = (
+				044F5319287EB6D400948767 /* FLYDataStatusProtocal.h */,
+				044F5317287EB6D400948767 /* FLYExceptionView.h */,
+				044F5318287EB6D400948767 /* FLYExceptionView.m */,
+			);
+			path = "异常状态View";
+			sourceTree = "<group>";
+		};
+		044F533A287EBAFE00948767 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				044F5344287EBB8D00948767 /* UICollectionView+FLYRefresh.h */,
+				044F5345287EBB8D00948767 /* UICollectionView+FLYRefresh.m */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		044F533B287EBB0000948767 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				044F5347287EBBA700948767 /* UITableView+FLYRefresh.h */,
+				044F5348287EBBA700948767 /* UITableView+FLYRefresh.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		044F5354287EBF0F00948767 /* FLYUser */ = {
+			isa = PBXGroup;
+			children = (
+				044F5356287EBF0F00948767 /* FLYUser.h */,
+				044F5358287EBF0F00948767 /* FLYUser.m */,
+				044F5357287EBF0F00948767 /* FLYUserAction.h */,
+				044F5355287EBF0F00948767 /* FLYUserAction.m */,
+			);
+			path = FLYUser;
+			sourceTree = "<group>";
+		};
+		6630D40B009B0D2868843346 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF0887727BB90EEC68799E6F /* Pods_OCApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C06E5DFF2D8DBA9A0801B149 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				350F7BB582691BD32AC709AB /* Pods-OCApp.debug.xcconfig */,
+				F5703F970874171FD95CA11E /* Pods-OCApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		044F52D3287EAAC400948767 /* OCApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044F52ED287EAAC800948767 /* Build configuration list for PBXNativeTarget "OCApp" */;
+			buildPhases = (
+				558E6EA2836358C1A327FC2A /* [CP] Check Pods Manifest.lock */,
+				044F52D0287EAAC400948767 /* Sources */,
+				044F52D1287EAAC400948767 /* Frameworks */,
+				044F52D2287EAAC400948767 /* Resources */,
+				5D401F02AA7FDD9F551C3867 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCApp;
+			productName = OCApp;
+			productReference = 044F52D4287EAAC400948767 /* OCApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		044F52CC287EAAC400948767 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = FLY;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					044F52D3287EAAC400948767 = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 044F52CF287EAAC400948767 /* Build configuration list for PBXProject "OCApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 044F52CB287EAAC400948767;
+			productRefGroup = 044F52D5287EAAC400948767 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				044F52D3287EAAC400948767 /* OCApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		044F52D2287EAAC400948767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044F52E7287EAAC800948767 /* LaunchScreen.storyboard in Resources */,
+				044F52E4287EAAC800948767 /* Assets.xcassets in Resources */,
+				044F5350287EBCB200948767 /* Tabbar.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		558E6EA2836358C1A327FC2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D401F02AA7FDD9F551C3867 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCApp/Pods-OCApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCApp/Pods-OCApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCApp/Pods-OCApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		044F52D0287EAAC400948767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044F5359287EBF1000948767 /* FLYUserAction.m in Sources */,
+				044F5330287EBA8A00948767 /* FLYMessageViewController.m in Sources */,
+				044F532D287EBA5600948767 /* FLYHomeViewController.m in Sources */,
+				044F5329287EB94C00948767 /* FLYNavigationController.m in Sources */,
+				044F5353287EBDEE00948767 /* FLYConfigureSDK.m in Sources */,
+				044F5346287EBB8D00948767 /* UICollectionView+FLYRefresh.m in Sources */,
+				044F5316287EB64500948767 /* FLYKeyValueModel.m in Sources */,
+				044F531A287EB6D400948767 /* FLYExceptionView.m in Sources */,
+				044F5315287EB64500948767 /* FLYModel.m in Sources */,
+				044F5323287EB89B00948767 /* FLYBaseCollectionViewController.m in Sources */,
+				044F5322287EB89B00948767 /* FLYBaseTableViewController.m in Sources */,
+				044F535A287EBF1000948767 /* FLYUser.m in Sources */,
+				044F5321287EB89B00948767 /* FLYBaseViewController.m in Sources */,
+				044F5333287EBAA500948767 /* FLYMyViewController.m in Sources */,
+				044F5349287EBBA700948767 /* UITableView+FLYRefresh.m in Sources */,
+				044F52D9287EAAC400948767 /* AppDelegate.m in Sources */,
+				044F5339287EBAD300948767 /* FLYNetwork.m in Sources */,
+				044F5338287EBAD300948767 /* FLYNetworkTool.m in Sources */,
+				044F532A287EB94C00948767 /* FLYTabBarController.m in Sources */,
+				044F52EA287EAAC800948767 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		044F52E5287EAAC800948767 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044F52E6287EAAC800948767 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		044F52EB287EAAC800948767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		044F52EC287EAAC800948767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		044F52EE287EAAC800948767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 350F7BB582691BD32AC709AB /* Pods-OCApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQL5TQ97YZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCApp/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "${SRCROOT}/OCApp/Constant/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OCApp/Resource/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.OCApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OCApp/Constant/OCApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		044F52EF287EAAC800948767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5703F970874171FD95CA11E /* Pods-OCApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQL5TQ97YZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCApp/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "${SRCROOT}/OCApp/Constant/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OCApp/Resource/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.OCApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OCApp/Constant/OCApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		044F52CF287EAAC400948767 /* Build configuration list for PBXProject "OCApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044F52EB287EAAC800948767 /* Debug */,
+				044F52EC287EAAC800948767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		044F52ED287EAAC800948767 /* Build configuration list for PBXNativeTarget "OCApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044F52EE287EAAC800948767 /* Debug */,
+				044F52EF287EAAC800948767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 044F52CC287EAAC400948767 /* Project object */;
+}
