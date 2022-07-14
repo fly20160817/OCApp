@@ -300,7 +300,7 @@
 		044F5300287EADA900948767 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				044F5324287EB8BD00948767 /* 异常状态View */,
+				044F5324287EB8BD00948767 /* ExceptionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,14 +410,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		044F5324287EB8BD00948767 /* 异常状态View */ = {
+		044F5324287EB8BD00948767 /* ExceptionView */ = {
 			isa = PBXGroup;
 			children = (
 				044F5319287EB6D400948767 /* FLYDataStatusProtocal.h */,
 				044F5317287EB6D400948767 /* FLYExceptionView.h */,
 				044F5318287EB6D400948767 /* FLYExceptionView.m */,
 			);
-			path = "异常状态View";
+			path = ExceptionView;
 			sourceTree = "<group>";
 		};
 		044F533A287EBAFE00948767 /* UICollectionView */ = {
