@@ -13,6 +13,18 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 
+//状态栏高度
+#define STATUSBAR_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
+//导航栏高度
+#define NAVBAR_HEIGHT [[UINavigationController alloc] init].navigationBar.frame.size.height
+//状态栏高度 + 导航栏高度
+#define STATUSADDNAV_HEIGHT (STATUSBAR_HEIGHT + NAVBAR_HEIGHT)
+//tabber高度
+#define TABBER_HEIGHT [[UITabBarController alloc] init].tabBar.frame.size.height
+
+//安全距离底部的高度
+#define SAFE_BOTTOM [FLYTools safeAreaInsets].bottom
+
 
 #ifdef DEBUG
 #define FLYLog(...) NSLog(__VA_ARGS__)
@@ -27,23 +39,7 @@
 
 #define RGB(r,g,b,a) [UIColor colorWithRed:((r)/255.0) green:((g)/255.0) blue:((b)/255.0) alpha:a]
 //随机颜色
-#define RGB_ARC4 RGB(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), 1);
-
-
-//状态栏高度
-#define STATUSBAR_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
-
-//导航栏高度
-#define NAVBAR_HEIGHT self.navigationController.navigationBar.frame.size.height
-
-//状态栏高度+导航栏高度
-#define STATUSADDNAV_HEIGHT (STATUSBAR_HEIGHT + NAVBAR_HEIGHT)
-
-//tabber高度
-#define TABBER_HEIGHT self.tabBarController.tabBar.frame.size.height
-
-//安全距离底部的高度
-#define SAFE_BOTTOM [FLYTools safeAreaInsets].bottom
+#define RGB_ARC4 RGB(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), 1)
 
 
 #define IMAGENAME(name) [UIImage imageNamed:name]

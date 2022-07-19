@@ -24,9 +24,14 @@
     
     NSDictionary * dic = @{@"aaa" : @[@"访问", @"访问ef"], @"bbb" : @[@"微风我们；1", @"抚摸切割"]};
     
-    NSLog(@"%@", array);
-    NSLog(@"\n\n\n\n");
-    NSLog(@"%@", dic);
+//    NSLog(@"%@", array);
+//    NSLog(@"\n\n\n\n");
+//    NSLog(@"%@", dic);
+    
+    NSLog(@"1111 = %f", STATUSBAR_HEIGHT);
+    NSLog(@"1111 = %f", NAVBAR_HEIGHT);
+    NSLog(@"1111 = %f", STATUSADDNAV_HEIGHT);
+    NSLog(@"1111 = %f", TABBER_HEIGHT);
         
 }
 

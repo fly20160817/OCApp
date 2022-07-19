@@ -40,6 +40,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+#pragma mark - placeholder
+
+/// 提示文字的Font
+@property (nonatomic, strong) UIFont * placeholderFont;
+/// 提示文字的颜色
+@property (nonatomic, strong) UIColor * placeholderColor;
+
+
+
 #pragma mark - 线
 
 /// 是否显示线 (默认NO)
@@ -56,6 +65,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 线的右边距 (默认0)
 @property (nonatomic, assign) CGFloat lineRightMargin;
+
+
+
+#pragma mark - other
+
+/// 是否隐藏光标 (默认NO)
+@property (nonatomic, assign) BOOL hiddenCursor;
 
 
 @end
