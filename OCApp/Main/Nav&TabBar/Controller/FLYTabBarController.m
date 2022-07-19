@@ -28,8 +28,8 @@
         barAppearance.shadowColor = [UIColor colorWithHexString:@"#ECECEC"];
         
         //设置底部按钮的字体和颜色
-        NSDictionary * normalDic = @{ NSFontAttributeName : FONT_R(10), NSForegroundColorAttributeName : COLORHEX(@"#666666") };
-        NSDictionary * selectedDic = @{ NSFontAttributeName : FONT_S(10), NSForegroundColorAttributeName : COLORHEX(@"#2BB9A0") };
+        NSDictionary * normalDic = @{ NSFontAttributeName : FONT_R(10), NSForegroundColorAttributeName : COLORHEX(@"#8E8E93") };
+        NSDictionary * selectedDic = @{ NSFontAttributeName : FONT_S(10), NSForegroundColorAttributeName : COLORHEX(@"#04A1FD") };
         barAppearance.stackedLayoutAppearance.normal.titleTextAttributes = normalDic;
         barAppearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedDic;
         
@@ -56,8 +56,8 @@
         
         UITabBarItem * item = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[self]];
         //设置底部按钮的字体和颜色 （字体只能在UIControlStateNormal状态设置，在其他状态设置均不生效。）
-        NSDictionary * normalDict = @{ NSFontAttributeName : FONT_R(10), NSForegroundColorAttributeName : COLORHEX(@"#666666") };
-        NSDictionary * selectedDict = @{ NSFontAttributeName : FONT_S(10), NSForegroundColorAttributeName : COLORHEX(@"#2BB9A0") };
+        NSDictionary * normalDict = @{ NSFontAttributeName : FONT_R(10), NSForegroundColorAttributeName : COLORHEX(@"#8E8E93") };
+        NSDictionary * selectedDict = @{ NSFontAttributeName : FONT_S(10), NSForegroundColorAttributeName : COLORHEX(@"#04A1FD") };
 
         [item setTitleTextAttributes:normalDict forState:UIControlStateNormal];
         [item setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
