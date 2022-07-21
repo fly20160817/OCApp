@@ -32,7 +32,7 @@
     [SVProgressHUD setDefaultMaskType:(SVProgressHUDMaskTypeNone)];
     //设置最小尺寸
     [SVProgressHUD setMinimumSize:CGSizeMake(100, 0)];
-    //设置最先消失时间
+    //设置最短消失时间
     [SVProgressHUD setMinimumDismissTimeInterval:3];
     //设置文字和转圈的颜色
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
@@ -53,9 +53,6 @@
     //设置键盘与文本字段的距离，不能小于零，默认值为10
     keyboardManager.keyboardDistanceFromTextField = 10;
     
-    //如果需要，重新加载布局 (如果用户明确进行了任何外部更改，则刷新textField/textView位置。)
-    [keyboardManager reloadLayoutIfNeeded];
-    
     //是否启用工具栏，默认YES
     keyboardManager.enableAutoToolbar = YES;
     
@@ -64,6 +61,9 @@
     
     //把工具栏上的"Done"按钮改成"完成"
     keyboardManager.toolbarDoneBarButtonItemText = @"完成";
+    
+    //如果需要，重新加载布局 (如果用户明确进行了任何外部更改，则刷新textField/textView位置。)
+    [keyboardManager reloadLayoutIfNeeded];
     
     
     /**
