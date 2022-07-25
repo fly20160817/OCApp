@@ -440,6 +440,7 @@
 
 /// 请求成功的处理
 /// @param isHandle 返回结果是否需要内部处理
+/// @param loadingType loading类型
 /// @param json 返回的数据
 /// @param success 成功回调
 /// @param failure 失败回调
