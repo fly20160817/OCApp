@@ -365,36 +365,30 @@ static NSString * kBaseUrl = BASE_API;
         {
             case AFNetworkReachabilityStatusUnknown:
             {
-                //未知网络
-                NSLog(@"未知网络");
-                
+                NSLog(@"网络状态未知");
                 networkBlock(NO);
             }
                 break;
             case AFNetworkReachabilityStatusNotReachable:
             {
-                //无法联网
-                NSLog(@"无法联网");
-                
+                NSLog(@"暂时没有网络连接");
                 networkBlock(NO);
             }
                 break;
                 
             case AFNetworkReachabilityStatusReachableViaWWAN:
             {
-                //手机自带网络
-                NSLog(@"当前使用的是2g/3g/4g/5g网络");
-                
+                NSLog(@"蜂窝数据");
                 networkBlock(YES);
             }
                 break;
+                
             case AFNetworkReachabilityStatusReachableViaWiFi:
             {
-                //WIFI
-                NSLog(@"当前在WIFI网络下");
-                
+                NSLog(@"以太网或者WiFi");
                 networkBlock(YES);
             }
+                break;
         }
         
         //停止检测网络状态
