@@ -128,7 +128,7 @@ typedef void(^ProgressBlock)(double progress);
 
 /// 判断是否有网
 /// @param networkBlock 是否有网的回调
-+ (void)getNetType:(void(^)(BOOL network))networkBlock;
++ (void)getNetworkStatus:(void(^)(BOOL isNetwork))networkBlock;
 
 
 /// 请求头添加token (要注意设置时的字段名，和接口定义的名字是否一样)

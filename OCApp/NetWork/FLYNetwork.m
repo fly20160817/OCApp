@@ -350,17 +350,19 @@ static NSString * kBaseUrl = BASE_API;
 
 /// 判断是否有网
 /// @param networkBlock 是否有网的回调
-+ (void)getNetType:(void(^)(BOOL network))networkBlock
++ (void)getNetworkStatus:(void(^)(BOOL isNetwork))networkBlock;
 {
     //创建监听管理者
-    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    __weak AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
     
     //打开检测开始检测网络状态
     [manager startMonitoring];
     
     //监听网络状态的改变
     [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
+        
+        switch (status)
+        {
             case AFNetworkReachabilityStatusUnknown:
             {
                 //未知网络
@@ -394,6 +396,9 @@ static NSString * kBaseUrl = BASE_API;
                 networkBlock(YES);
             }
         }
+        
+        //停止检测网络状态
+        [manager stopMonitoring];
     }];
 
 }

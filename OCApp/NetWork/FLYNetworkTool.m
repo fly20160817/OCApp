@@ -486,9 +486,9 @@
     
     if( isHandle )
     {
-        [FLYNetwork getNetType:^(BOOL network) {
+        [FLYNetwork getNetworkStatus:^(BOOL isNetwork) {
             
-            [SVProgressHUD showInfoWithStatus:network ? @"服务器异常，请稍后重试。" : @"您的网络好像出现了问题"];
+            [SVProgressHUD showInfoWithStatus:isNetwork ? @"服务器异常，请稍后重试。" : @"您的网络好像出现了问题"];
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
         }];
     }
