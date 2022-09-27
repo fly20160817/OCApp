@@ -66,12 +66,12 @@
 #define DEVICE_VERSION UIDevice.currentDevice.systemVersion
 
 
-#define FONT_R(font) [UIFont fontWithName:PFSCR size:font]
-#define FONT_M(font) [UIFont fontWithName:PFSCM size:font]
-#define FONT_S(font) [UIFont fontWithName:PFSCS size:font]
-#define FONT_L(font) [UIFont fontWithName:PFSCL size:font]
-#define FONT_U(font) [UIFont fontWithName:PFSCU size:font]
-#define FONT_T(font) [UIFont fontWithName:PFSCT size:font]
+#define FONT_R(Size) [UIFont fontWithName:PFSCR size:Size]
+#define FONT_M(Size) [UIFont fontWithName:PFSCM size:Size]
+#define FONT_S(Size) [UIFont fontWithName:PFSCS size:Size]
+#define FONT_L(Size) [UIFont fontWithName:PFSCL size:Size]
+#define FONT_U(Size) [UIFont fontWithName:PFSCU size:Size]
+#define FONT_T(Size) [UIFont fontWithName:PFSCT size:Size]
 
 
 //苹方-简 常规体

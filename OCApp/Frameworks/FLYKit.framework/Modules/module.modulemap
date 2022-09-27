@@ -4,3 +4,8 @@ framework module FLYKit {
   export *
   module * { export * }
 }
+
+module FLYKit.Swift {
+  header "FLYKit-Swift.h"
+  requires objc
+}

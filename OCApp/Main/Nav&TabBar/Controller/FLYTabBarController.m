@@ -8,10 +8,14 @@
 #import "FLYTabBarController.h"
 #import "FLYNavigationController.h"
 
+#import "FLYHomeViewController.h"
+#import "FLYMessageViewController.h"
+#import "FLYMyViewController.h"
+
 @interface FLYTabBarController ()
 
 @property (nonatomic, strong) NSArray * dataList;
-@property (nonatomic, strong) NSArray * vcNames;
+@property (nonatomic, strong) NSArray<Class> * vcClassList;
 
 @end
 
@@ -85,13 +89,16 @@
 
 - (void)configViewControllers
 {
-    NSMutableArray * array = self.vcNames.mutableCopy;
+    NSMutableArray * array = self.vcClassList.mutableCopy;
     
     for ( NSInteger i=0; i < array.count; i++ )
     {
-        NSString * vcName = array[i];
         
-        UIViewController * vc = [[NSClassFromString(vcName) alloc] init];
+//        NSString * vcName = array[i];
+//        UIViewController * vc = [[NSClassFromString(vcName) alloc] init];
+        
+        Class class = array[i];
+        UIViewController * vc = [[class alloc] init];
         FLYNavigationController * nav = [[FLYNavigationController alloc] initWithRootViewController:vc];
         nav.tabBarItem.title = self.dataList[i][@"title"];
         nav.tabBarItem.image = [UIImage imageNamedWithOriginal:self.dataList[i][@"normal"]];
@@ -106,13 +113,13 @@
 
 #pragma mark - setters and getters
 
--(NSArray *)vcNames
+-(NSArray *)vcClassList
 {
-    if ( _vcNames == nil )
+    if ( _vcClassList == nil )
     {
-        _vcNames = @[ @"FLYHomeViewController", @"FLYMessageViewController", @"FLYMyViewController" ];
+        _vcClassList = @[ FLYHomeViewController.class, FLYMessageViewController.class, FLYMyViewController.class ];
     }
-    return _vcNames;
+    return _vcClassList;
 }
 
 -(NSArray *)dataList

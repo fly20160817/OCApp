@@ -1,6 +1,6 @@
 //
 //  FLYAudioTools.h
-//  02-音效封装工具类
+//  FLYKit
 //
 //  Created by fly on 2019/4/29.
 //  Copyright © 2019 fly. All rights reserved.

@@ -26,7 +26,6 @@
         NSLog(@"isNetwork = %d", isNetwork);
         
     }];
-        
 }
 
 /*

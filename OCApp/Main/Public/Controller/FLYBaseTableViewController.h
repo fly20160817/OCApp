@@ -7,7 +7,6 @@
 
 #import "FLYBaseTableViewController.h"
 #import "FLYBaseViewController.h"
-#import "UITableView+FLYRefresh.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

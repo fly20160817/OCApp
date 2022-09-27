@@ -1,6 +1,6 @@
 //
 //  FLYPhotoManager.h
-//  BuDeJie
+//  FLYKit
 //
 //  Created by fly on 2019/2/27.
 //  Copyright © 2019年 fly. All rights reserved.
@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
     completionHandler: 保存完成的回调
  */
 + (void)savePhoto:(UIImage *)image albumTitle:(NSString *)albumTitle completionHandler:(void(^)(BOOL success, NSError *error))completionHandler;
+
+
 
 @end
 

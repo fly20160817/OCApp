@@ -20,6 +20,7 @@
 #import <FLYKit/FLYKeychain.h>
 #import <FLYKit/FLYTools.h>
 #import <FLYKit/FLYDeviceManager.h>
-
+#import <FLYKit/FLYPrivacy.h>
+#import <FLYKit/FLYQRCodeTools.h>
 
 #endif /* Tools_Header_h */
