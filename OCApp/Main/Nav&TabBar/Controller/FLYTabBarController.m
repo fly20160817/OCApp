@@ -82,6 +82,10 @@
 
 - (void)initUI
 {
+    //设置tabBar不透明，内容就会自动从tabBar上面开始
+    self.tabBar.translucent = NO;
+    
+    
     //加载控制器
     [self configViewControllers];
 
