@@ -21,11 +21,6 @@
     
     self.showNavLine = YES;
     
-    [FLYNetwork getNetworkStatus:^(BOOL isNetwork) {
-        
-        NSLog(@"isNetwork = %d", isNetwork);
-        
-    }];
 }
 
 /*

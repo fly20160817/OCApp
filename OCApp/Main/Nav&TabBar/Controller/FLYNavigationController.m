@@ -43,7 +43,7 @@
     
     
     
-    if (@available(iOS 15.0, *))
+    if (@available(iOS 13.0, *))
     {
         UINavigationBarAppearance * barAppearance = [[UINavigationBarAppearance alloc] init];
         //bar的背景颜色
@@ -122,7 +122,7 @@
     _isLine = isLine;
     
    
-    if (@available(iOS 15.0, *))
+    if (@available(iOS 13.0, *))
     {
         self.navigationBar.scrollEdgeAppearance.shadowColor = isLine ? COLORHEX(@"#EAEAEA") : [UIColor clearColor];
         self.navigationBar.standardAppearance.shadowColor = isLine ? COLORHEX(@"#EAEAEA") : [UIColor clearColor];
