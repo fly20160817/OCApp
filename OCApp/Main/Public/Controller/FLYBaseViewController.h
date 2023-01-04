@@ -15,6 +15,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL showNavLine;
 
+
+
+/** 下面的属性导航栏类已经设置了，如果哪个页面设计的不一样，可以单独设置 **/
+
+/// 导航栏bar的背景颜色
+@property (nonatomic, strong) UIColor * navBarColor;
+
+/// 导航栏标题颜色
+@property (nonatomic, strong) UIColor * navTitleColor;
+
+/// 导航栏标题字体
+@property (nonatomic, strong) UIFont * navTitleFont;
+
+/// 导航栏返回箭头的图片名字
+@property (nonatomic, strong) NSString * navArrowImageName;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

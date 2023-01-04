@@ -47,13 +47,13 @@
     {
         UINavigationBarAppearance * barAppearance = [[UINavigationBarAppearance alloc] init];
         //bar的背景颜色
-        barAppearance.backgroundColor = [UIColor whiteColor];
+        barAppearance.backgroundColor = k_BarColor;
         
         //底下线的颜色
         barAppearance.shadowColor = [UIColor clearColor];
         
         //设置导航条标题的字体、颜色
-        NSDictionary * dic = @{ NSFontAttributeName : FONT_M(16), NSForegroundColorAttributeName : COLORHEX(@"#333333") };
+        NSDictionary * dic = @{ NSFontAttributeName : k_TitleFont, NSForegroundColorAttributeName : k_TitleColor };
         barAppearance.titleTextAttributes = dic;
         
         self.navigationBar.scrollEdgeAppearance = barAppearance;
@@ -62,13 +62,13 @@
     else
     {
         //bar的背景颜色
-        self.navigationBar.barTintColor = COLORHEX(@"#FFFFFF");
+        self.navigationBar.barTintColor = k_BarColor;
             
         //底下线的颜色
         self.navigationBar.shadowImage = [UIImage imageWithColor:[UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, 1)];
         
         //设置导航条标题的字体、颜色
-        NSDictionary * dic = @{ NSFontAttributeName : FONT_M(16), NSForegroundColorAttributeName : COLORHEX(@"#333333") };
+        NSDictionary * dic = @{ NSFontAttributeName : k_TitleFont, NSForegroundColorAttributeName : k_TitleColor };
         self.navigationBar.titleTextAttributes = dic;
     }
 }
@@ -78,7 +78,7 @@
     if ( self.viewControllers.count > 0 )
     {
         //自定义返回按钮
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"icon_return" target:self action:@selector(backAction)];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:k_ArrowImageName target:self action:@selector(backAction)];
         
         //隐藏底部tabBer
         viewController.hidesBottomBarWhenPushed = YES;
@@ -131,6 +131,75 @@
     {
         self.navigationBar.shadowImage = [UIImage imageWithColor: isLine ? COLORHEX(@"#EAEAEA") : [UIColor clearColor] size:CGSizeMake(SCREEN_WIDTH, 1)];
     }
+}
+
+-(void)setBarColor:(UIColor *)barColor
+{
+    _barColor = barColor;
+    
+    if (@available(iOS 13.0, *))
+    {
+        self.navigationBar.scrollEdgeAppearance.backgroundColor = barColor;
+        self.navigationBar.standardAppearance.backgroundColor = barColor;
+    }
+    else
+    {
+        self.navigationBar.barTintColor = barColor;
+    }
+}
+
+-(void)setTitleColor:(UIColor *)titleColor
+{
+    _titleColor = titleColor;
+    
+    
+    if (@available(iOS 13.0, *))
+    {
+        UINavigationBarAppearance * barAppearance = self.navigationBar.standardAppearance;
+        
+        NSMutableDictionary * dic = barAppearance.titleTextAttributes.mutableCopy;
+        dic[NSForegroundColorAttributeName] = titleColor;
+        barAppearance.titleTextAttributes = dic;
+        
+        self.navigationBar.scrollEdgeAppearance = barAppearance;
+        self.navigationBar.standardAppearance = barAppearance;
+    }
+    else
+    {
+        NSMutableDictionary * dic = self.navigationBar.titleTextAttributes.mutableCopy;
+        dic[NSForegroundColorAttributeName] = titleColor;
+        self.navigationBar.titleTextAttributes = dic;
+    }
+}
+
+-(void)setTitleFont:(UIFont *)titleFont
+{
+    _titleFont = titleFont;
+    
+    if (@available(iOS 13.0, *))
+    {
+        UINavigationBarAppearance * barAppearance = self.navigationBar.standardAppearance;
+        
+        NSMutableDictionary * dic = barAppearance.titleTextAttributes.mutableCopy;
+        dic[NSFontAttributeName] = titleFont;
+        barAppearance.titleTextAttributes = dic;
+        
+        self.navigationBar.scrollEdgeAppearance = barAppearance;
+        self.navigationBar.standardAppearance = barAppearance;
+    }
+    else
+    {
+        NSMutableDictionary * dic = self.navigationBar.titleTextAttributes.mutableCopy;
+        dic[NSFontAttributeName] = titleFont;
+        self.navigationBar.titleTextAttributes = dic;
+    }
+}
+
+-(void)setArrowImageName:(NSString *)arrowImageName
+{
+    _arrowImageName = arrowImageName;
+    
+    self.viewControllers.lastObject.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:self.arrowImageName target:self action:@selector(backAction)];
 }
 
 
