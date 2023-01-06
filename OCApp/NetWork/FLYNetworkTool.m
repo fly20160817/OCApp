@@ -519,6 +519,11 @@
 /// 加密
 + (id)encryption:(id)params
 {
+    if( params == nil )
+    {
+        return nil;
+    }
+    
     //AES加密参数
     NSString * dataEncryption = [FLYAES aes128EncryptionWithDic:params key:@"AES的KEY"];
     //RSA加密AES的key
@@ -534,6 +539,11 @@
 /// 解密
 + (NSDictionary *)decrypt:(NSDictionary *)params
 {
+    if( params == nil )
+    {
+        return nil;
+    }
+    
     //RSA解密AES的key
     NSString * aesKey = [FLYRSA decryptString:params[@"encrypted"] privateKey:@"RSA私钥"];
     //AES解密数据
