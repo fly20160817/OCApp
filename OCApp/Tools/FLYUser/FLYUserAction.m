@@ -44,7 +44,9 @@
 //{
 //    //清空用户信息
 //    [FLYUser clearUser];
-//    
+//
+//    //清空网络请求的token
+//    [FLYNetwork setTokenHTTPHeaders:nil];
 //    
 //    //删除别名
 //    [JPUSHService deleteAlias:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {

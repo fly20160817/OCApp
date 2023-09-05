@@ -133,7 +133,7 @@ typedef void(^ProgressBlock)(double progress);
 
 /// 请求头添加token (要注意设置时的字段名，和接口定义的名字是否一样)
 /// @param token token
-+ (void)setTokenHTTPHeaders:(NSString *)token;
++ (void)setTokenHTTPHeaders:(nullable NSString *)token;
 
 @end
 

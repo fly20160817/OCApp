@@ -10,6 +10,8 @@
 #import "FLYUser.h"
 
 static NSString * kBaseUrl = BASE_API;
+//请求头里接收token字段的名字（服务器定义的）
+static NSString * kToken = @"token";
 
 @interface FLYHTTPSessionManager : AFHTTPSessionManager
 
@@ -25,17 +27,40 @@ static NSString * kBaseUrl = BASE_API;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
+        
+        /********** 关于token设置 **********
+         
+         方法一：
+         initWithBaseURL:sessionConfiguration:
+         通过sessionConfiguration参数设置令牌通常是用于全局设置，在整个AFHTTPSessionManager的生命周期内都有效。这意味着，无论你发送多少个请求，都会自动包含在每个请求的请求头中，除非你另行覆盖或删除它。
+         
+         方法二：
+         [manager.requestSerializer setValue:token forHTTPHeaderField:@"token"]
+         这种方法是针对单个请求的设置。你可以在每个请求之前设置请求头，以便为该请求指定特定的令牌值，而不受全局设置的影响。
+         
+         
+         注意点：
+         通过方法一设置的token，后面无法清空。(修改可以通过使用方法二来覆盖，但方法二清空只能清空它自己的，清空之后会使用方法一config里面的token)
+         
+         **********************************/
+        
+        
         NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
         //配置超时时长 (默认60s)
         config.timeoutIntervalForRequest = 15;
         //请求头 (设置要token时，注意设置时的字段名，和接口定义的名字是否一样)
-        if ( [FLYUser sharedUser].token )
-        {
-            config.HTTPAdditionalHeaders = @{ @"token" : [FLYUser sharedUser].token };
-        }
+//        if ( [FLYUser sharedUser].token )
+//        {
+//            config.HTTPAdditionalHeaders = @{ kToken : [FLYUser sharedUser].token };
+//        }
         
         sessionManager = [[FLYHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrl] sessionConfiguration:config];
         
+        //接收参数类型
+        sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif",nil];
+        
+        //设置超时时间
+        sessionManager.requestSerializer.timeoutInterval = 15;
         
         //加这两句，适配raw类型的请求
         //设置请求体数据为json类型
@@ -43,22 +68,25 @@ static NSString * kBaseUrl = BASE_API;
         //设置响应体数据为json类型
         sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
         
-        
-        //接收参数类型
-        sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif",nil];
-        //设置超时时间
-        //sessionManager.requestSerializer.timeoutInterval = 15;
+        if ( [FLYUser sharedUser].token )
+        {
+            //请求头 (设置要token时，注意设置时的字段名，和接口定义的名字是否一样)
+            [sessionManager.requestSerializer setValue:[FLYUser sharedUser].token forHTTPHeaderField:kToken];
+        }
         
         
         
         /** 设置无条件的信任服务器上的证书 */
-        //除了设置下面的配置，还需要在info.plist文件里设置App Transport Security Settings 为YES。
-        AFSecurityPolicy * policy = [AFSecurityPolicy defaultPolicy];
-        //客户端是否信任非法证书
-        policy.allowInvalidCertificates = YES;
-        //是否在证书域字段中验证域名
-        policy.validatesDomainName = NO;
-        sessionManager.securityPolicy = policy;
+        
+//        //除了设置下面的配置，还需要在info.plist文件里设置App Transport Security Settings 为YES。
+//        AFSecurityPolicy * policy = [AFSecurityPolicy defaultPolicy];
+//        //客户端是否信任非法证书
+//        policy.allowInvalidCertificates = YES;
+//        //是否在证书域字段中验证域名
+//        policy.validatesDomainName = NO;
+//        sessionManager.securityPolicy = policy;
+
+        
         
         
         
@@ -67,7 +95,7 @@ static NSString * kBaseUrl = BASE_API;
          1.执行命令生成.cer证书，然后把这个证书拖到项目里。
          2.设置AFNetworking的AFSSLPinningMode类型为AFSSLPinningModePublicKey
          
-         ********************/
+         ***********************************************************/
         
         
         //第一步
@@ -92,12 +120,12 @@ static NSString * kBaseUrl = BASE_API;
          比对服务器证书和本地证书的所有内容，完全一致则信任服务器证书；
          最安全的比对模式。但是也比较麻烦，因为证书是打包在APP中，如果服务器证书改变或者到期，旧版本无法使用了，我们就需要用户更新APP来使用最新的证书。
          */
-        if ( [kBaseUrl containsString:@"https"] )
-        {
-            //policyWithPinningMode:Pinning类型 withPinnedCertificates:.cer证书文件的位置
-            AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey withPinnedCertificates:[AFSecurityPolicy certificatesInBundle:[NSBundle mainBundle]]];
-            sessionManager.securityPolicy = securityPolicy;
-        }
+//        if ( [kBaseUrl containsString:@"https"] )
+//        {
+//            //policyWithPinningMode:Pinning类型 withPinnedCertificates:.cer证书文件的位置
+//            AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey withPinnedCertificates:[AFSecurityPolicy certificatesInBundle:[NSBundle mainBundle]]];
+//            sessionManager.securityPolicy = securityPolicy;
+//        }
  
     });
     
@@ -399,10 +427,11 @@ static NSString * kBaseUrl = BASE_API;
 
 /// 请求头添加token
 /// @param token token
-+ (void)setTokenHTTPHeaders:(NSString *)token
++ (void)setTokenHTTPHeaders:(nullable NSString *)token
 {
     //在sharedClient单利里已经设置了Token，但如果执行时没登录，登录后不会再执行了，所以登录后要单独再设置
-    [[FLYHTTPSessionManager sharedManager].requestSerializer setValue:token forHTTPHeaderField:@"token"];
+    //(设置要token时，注意设置时的字段名，和接口定义的名字是否一样)
+    [[FLYHTTPSessionManager sharedManager].requestSerializer setValue:token forHTTPHeaderField:kToken];
 }
 
 @end
