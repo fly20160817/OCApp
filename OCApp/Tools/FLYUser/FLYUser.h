@@ -6,11 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FLYModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FLYUser : FLYModel
+@interface FLYUser : NSObject
 
 @property (nonatomic, strong) NSString * token;
 

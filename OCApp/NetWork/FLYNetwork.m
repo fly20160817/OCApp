@@ -57,7 +57,7 @@ static NSString * kToken = @"token";
         sessionManager = [[FLYHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseUrl] sessionConfiguration:config];
         
         //接收参数类型
-        sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", @"text/json", @"text/javascript",@"text/plain",@"image/gif",nil];
+        sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"application/xml", @"text/html", @"text/json", @"text/javascript", @"text/plain", @"text/xml", @"image/png", @"image/jpeg", @"image/gif", nil];
         
         //设置超时时间
         sessionManager.requestSerializer.timeoutInterval = 15;
