@@ -5,6 +5,37 @@
 //  Created by fly on 2021/10/9.
 //
 
+/*************** 请求序列化器、响应序列化器 *******************
+
+ 请求序列化器（Request Serializer）是网络请求库中的一种工具，用于将应用程序中的请求参数（比如字典、数组、模型对象等）转换为网络请求的有效格式。这个格式通常是二进制数据，可以被发送到服务器端进行处理。
+
+ 常见的请求序列化器有以下几种：
+ AFHTTPRequestSerializer：用于将请求参数以普通的 HTTP 格式发送，通常是在请求的 URL 中包含参数，或者是作为 POST 请求的 Body 中包含参数。
+ AFJSONRequestSerializer：用于将请求参数转换为 JSON 格式，并将其作为请求的 Body 发送给服务器。
+ AFPropertyListRequestSerializer：用于将请求参数转换为 Property List 格式（通常是 XML 或者二进制格式），并将其作为请求的 Body 发送给服务器。
+ 
+ 选择合适的请求序列化器可以确保请求参数被正确地发送到服务器，并与服务器端的接口规范相匹配，从而实现顺利的网络请求和数据交换。
+ 
+ 
+ 
+ 
+ 响应序列化器（Response Serializer）是用于处理从服务器接收到的数据的工具。在 iOS 开发中，它负责将从服务器返回的原始数据（通常是二进制数据）转换成应用程序能够理解的对象，比如字典、数组、模型对象等。
+
+ 常见的响应序列化器有以下几种：
+ AFJSONResponseSerializer：将服务器返回的 JSON 数据解析成 Foundation 对象，比如字典、数组。
+ AFXMLParserResponseSerializer：将服务器返回的 XML 数据解析成 NSXMLParser 对象。
+ AFHTTPResponseSerializer：不对服务器返回的数据做任何解析，直接返回原始的 NSData 对象。
+ 
+ 选择合适的响应序列化器可以简化网络请求的处理过程，使得开发者能够更方便地处理从服务器返回的数据，并将其用于应用程序的业务逻辑中。
+ 
+ 
+ 
+ 🌟🌟🌟如果服务器返回的数据解析不了，可以试试用AFHTTPResponseSerializer。
+ AFHTTPResponseSerializer它能够接收来自服务器的任何类型的响应内容，并直接将响应数据返回给你。这意味着无论服务器返回的是JSON数据、HTML数据还是其他类型的数据，AFHTTPResponseSerializer都可以将其原样返回，不会进行任何解析或转换。
+ 它的缺点是你需要自己手动处理响应数据。如果服务器返回的是JSON数据，你需要自己解析JSON；如果是HTML数据，你需要自己处理HTML。这样可能会增加你的代码复杂度，并且需要更多的工作来处理不同类型的响应内容。
+ 
+ *********************************************************/
+
 #import "FLYNetwork.h"
 #import "AFNetworking.h"
 #import "FLYUser.h"
@@ -63,9 +94,9 @@ static NSString * kToken = @"token";
         sessionManager.requestSerializer.timeoutInterval = 15;
         
         //加这两句，适配raw类型的请求
-        //设置请求体数据为json类型
+        //请求序列化器 设置 为JSON类型
         sessionManager.requestSerializer  = [AFJSONRequestSerializer serializer];
-        //设置响应体数据为json类型
+        //响应序列化器 设置 为JSON类型
         sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
         
         if ( [FLYUser sharedUser].token )
