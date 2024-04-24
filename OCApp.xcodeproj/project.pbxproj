@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0404EAB22BD97B940053E475 /* FLYNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 0404EAB12BD97B940053E475 /* FLYNotifications.m */; };
+		0404EAB52BD97DBA0053E475 /* FLYNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 0404EAB42BD97DBA0053E475 /* FLYNotifications.m */; };
 		044F52D9287EAAC400948767 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F52D8287EAAC400948767 /* AppDelegate.m */; };
 		044F52E4287EAAC800948767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F52E3287EAAC800948767 /* Assets.xcassets */; };
 		044F52E7287EAAC800948767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F52E5287EAAC800948767 /* LaunchScreen.storyboard */; };
@@ -47,8 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0404EAB02BD97B940053E475 /* FLYNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FLYNotifications.h; path = ../../../../.Trash/OCApp/OCApp/Tools/FLYNotifications.h; sourceTree = "<group>"; };
-		0404EAB12BD97B940053E475 /* FLYNotifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FLYNotifications.m; path = ../../../../.Trash/OCApp/OCApp/Tools/FLYNotifications.m; sourceTree = "<group>"; };
+		0404EAB32BD97DBA0053E475 /* FLYNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLYNotifications.h; sourceTree = "<group>"; };
+		0404EAB42BD97DBA0053E475 /* FLYNotifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLYNotifications.m; sourceTree = "<group>"; };
 		044F52D4287EAAC400948767 /* OCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044F52D7287EAAC400948767 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		044F52D8287EAAC400948767 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				044F5354287EBF0F00948767 /* FLYUser */,
-				0404EAB02BD97B940053E475 /* FLYNotifications.h */,
-				0404EAB12BD97B940053E475 /* FLYNotifications.m */,
+				0404EAB32BD97DBA0053E475 /* FLYNotifications.h */,
+				0404EAB42BD97DBA0053E475 /* FLYNotifications.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -563,7 +563,7 @@
 			files = (
 				044F5359287EBF1000948767 /* FLYUserAction.m in Sources */,
 				044F5330287EBA8A00948767 /* FLYMessageViewController.m in Sources */,
-				0404EAB22BD97B940053E475 /* FLYNotifications.m in Sources */,
+				0404EAB52BD97DBA0053E475 /* FLYNotifications.m in Sources */,
 				044F532D287EBA5600948767 /* FLYHomeViewController.m in Sources */,
 				044F5329287EB94C00948767 /* FLYNavigationController.m in Sources */,
 				044F5353287EBDEE00948767 /* FLYConfigureSDK.m in Sources */,
