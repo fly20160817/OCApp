@@ -73,6 +73,34 @@
     }
 }
 
+
+
+/*********************** 关于状态栏颜色 ***********************
+ 
+ 在iOS 9及其之前改变statusbar的颜色比较简单
+ [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+ 
+ 在iOS 10开始 上面的方法被废弃。由每个控制器的 preferredStatusBarStyle 方法进行设置。
+ 1.Info.plist 中 View controller-based status bar appearance 设置为 YES
+ 2.控制器中写下面这个方法
+ - (UIStatusBarStyle)preferredStatusBarStyle
+ {
+    return UIStatusBarStyleLightContent;
+ }
+ 
+ 注意：状态栏的颜色由控制器来控制，但如果有导航栏，就会被UINavigationController控制，控制器里的 -(UIStatusBarStyle)preferredStatusBarStyle 方法就不执行了。所以我们要把控制状态栏的颜色的权限从导航栏让给控制器。
+ 
+ ************************************************************/
+
+// 返回控制状态栏样式的子视图控制器
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    
+    // 返回最上面的控制器
+    return self.topViewController;
+}
+
+
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if ( self.viewControllers.count > 0 )
