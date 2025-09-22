@@ -40,9 +40,9 @@
 #import "AFNetworking.h"
 #import "FLYUser.h"
 
-static NSString * kBaseUrl = BASE_API;
+static NSString * kBaseUrl = @"";
 //请求头里接收token字段的名字（服务器定义的）
-static NSString * kToken = @"token";
+static NSString * kToken = @"Token";
 
 @interface FLYHTTPSessionManager : AFHTTPSessionManager
 

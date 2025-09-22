@@ -29,6 +29,9 @@
 		044F5359287EBF1000948767 /* FLYUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5355287EBF0F00948767 /* FLYUserAction.m */; };
 		044F535A287EBF1000948767 /* FLYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F5358287EBF0F00948767 /* FLYUser.m */; };
 		0494B7E028E29A6B004AA82B /* FLYKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04F31E8728864847007BC8F0 /* FLYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04B37DCB2C7449EC00C5FCF6 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B37DCA2C7449EC00C5FCF6 /* TestViewController.m */; };
+		04B37DCD2C744B5E00C5FCF6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B37DCC2C744B5E00C5FCF6 /* Logger.swift */; };
+		04B37DCF2C744B8000C5FCF6 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B37DCE2C744B8000C5FCF6 /* TimerManager.swift */; };
 		04F31E8828864848007BC8F0 /* FLYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F31E8728864847007BC8F0 /* FLYKit.framework */; };
 		C10E966804B5DFA0218B5761 /* Pods_OCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0887727BB90EEC68799E6F /* Pods_OCApp.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +94,10 @@
 		044F5356287EBF0F00948767 /* FLYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYUser.h; sourceTree = "<group>"; };
 		044F5357287EBF0F00948767 /* FLYUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYUserAction.h; sourceTree = "<group>"; };
 		044F5358287EBF0F00948767 /* FLYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYUser.m; sourceTree = "<group>"; };
+		04B37DC92C7449EC00C5FCF6 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		04B37DCA2C7449EC00C5FCF6 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		04B37DCC2C744B5E00C5FCF6 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		04B37DCE2C744B8000C5FCF6 /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		04F31E8728864847007BC8F0 /* FLYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FLYKit.framework; sourceTree = "<group>"; };
 		350F7BB582691BD32AC709AB /* Pods-OCApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCApp.debug.xcconfig"; path = "Target Support Files/Pods-OCApp/Pods-OCApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0887727BB90EEC68799E6F /* Pods_OCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,6 +359,10 @@
 			children = (
 				044F532B287EBA5600948767 /* FLYHomeViewController.h */,
 				044F532C287EBA5600948767 /* FLYHomeViewController.m */,
+				04B37DC92C7449EC00C5FCF6 /* TestViewController.h */,
+				04B37DCA2C7449EC00C5FCF6 /* TestViewController.m */,
+				04B37DCC2C744B5E00C5FCF6 /* Logger.swift */,
+				04B37DCE2C744B8000C5FCF6 /* TimerManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -572,9 +583,12 @@
 				044F5323287EB89B00948767 /* FLYBaseCollectionViewController.m in Sources */,
 				044F5322287EB89B00948767 /* FLYBaseTableViewController.m in Sources */,
 				044F535A287EBF1000948767 /* FLYUser.m in Sources */,
+				04B37DCB2C7449EC00C5FCF6 /* TestViewController.m in Sources */,
+				04B37DCF2C744B8000C5FCF6 /* TimerManager.swift in Sources */,
 				044F5321287EB89B00948767 /* FLYBaseViewController.m in Sources */,
 				044F5333287EBAA500948767 /* FLYMyViewController.m in Sources */,
 				044F52D9287EAAC400948767 /* AppDelegate.m in Sources */,
+				04B37DCD2C744B5E00C5FCF6 /* Logger.swift in Sources */,
 				044F5339287EBAD300948767 /* FLYNetwork.m in Sources */,
 				044F5338287EBAD300948767 /* FLYNetworkTool.m in Sources */,
 				044F532A287EB94C00948767 /* FLYTabBarController.m in Sources */,
@@ -715,7 +729,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NQL5TQ97YZ;
+				DEVELOPMENT_TEAM = DJ235HCXS7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OCApp/Frameworks",
@@ -763,7 +777,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fly.OCApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.OCAppfwfw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "OCApp/Constant/OCApp-Bridging-Header.h";
@@ -782,7 +796,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NQL5TQ97YZ;
+				DEVELOPMENT_TEAM = DJ235HCXS7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OCApp/Frameworks",
@@ -830,7 +844,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fly.OCApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.OCAppfwfw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "OCApp/Constant/OCApp-Bridging-Header.h";

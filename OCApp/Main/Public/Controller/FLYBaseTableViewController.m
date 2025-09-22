@@ -101,8 +101,15 @@
         _tableView.tableFooterView = [[UIView alloc] init];
         //开始拖动时，键盘将关闭
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-        //解决滑动的时候自动向下偏移20pt的问题
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        
+        /*
+            .automatic 默认值，系统根据安全区域、导航栏、TabBar 等自动调整 scrollView 的 contentInset。
+            .scrollableAxes 根据 scrollView 的可滚动方向自动调整 inset（iOS 13+）。
+            .never 不自动调整 inset，由开发者自己控制。
+            .always 总是调整 inset，即使 scrollView 没有被导航栏/TabBar 遮挡。
+         */
+        //解决滑动的时候自动向下偏移20pt的问题 （为了自动调整安全区域，我们最好不要改变它的默认值）
+        //_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:k_CellReuseIdentifier];
         [_tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:k_HeaderViewReuseIdentifier];

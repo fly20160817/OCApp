@@ -6,6 +6,7 @@
 //
 
 #import "FLYHomeViewController.h"
+#import "TestViewController.h"
 
 @interface FLYHomeViewController ()
 
@@ -24,7 +25,8 @@
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-
+    TestViewController * vc = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

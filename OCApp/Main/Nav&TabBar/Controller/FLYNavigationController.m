@@ -38,7 +38,8 @@
     //设置系统的滑动手势代理为自己
     self.interactivePopGestureRecognizer.delegate = self;
     
-    //设置导航栏不透明，内容就会自动从导航栏下面开始
+    // 设置导航栏是否半透明 (YES：导航栏半透明，内容会延伸到导航栏下方；NO：导航栏不透明，内容不会延伸到导航栏下方)
+    // 设置半透明时，如果导航栏下面的是scrollView，设置 scrollView.contentInsetAdjustmentBehavior = .automatic，内容会自动往下偏移，让内容不会被导航栏遮挡。(barAppearance.backgroundColor的颜色会影响到导航栏的半透明，可以设置clearColor或者带透明度的颜色)
     self.navigationBar.translucent = NO;
     
     

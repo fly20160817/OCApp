@@ -82,8 +82,9 @@
 
 - (void)initUI
 {
-    //设置tabBar不透明，内容就会自动从tabBar上面开始
-    self.tabBar.translucent = NO;
+    // 设置tabBar是否半透明 (YES：标签栏半透明，内容会延伸到tabBar下方；NO：标签栏不透明，内容不会延伸到tabBar下方)
+    // 设置半透明时，如果tabBar下面的是 scrollView，设置 scrollView.contentInsetAdjustmentBehavior = .automatic，内容会自动往上偏移，让内容不会被tabBar遮挡。
+    self.tabBar.translucent = YES;
     
     
     //加载控制器
